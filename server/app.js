@@ -5,9 +5,7 @@ const port = 3000;
 const app = express();
 app.use("/", studentRoutes);
 
-createConnection(
-  "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.6"
-).then(() => {
+createConnection("mongodb://127.0.0.1:27017/StudentData").then(() => {
   console.log("Connection Created");
 });
 
