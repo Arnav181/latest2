@@ -51,7 +51,7 @@ function Register() {
         <Input type="password" placeholder="Password" required id='password'/>
         <Button type="submit">Sign Up</Button>
       </RegisterForm>
-      <BackLink to="/">Back to Home</BackLink>
+      <BackLink to="/LandingPage">Back to Home</BackLink>
     </RegisterContainer>
   );
 }
