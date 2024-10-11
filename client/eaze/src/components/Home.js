@@ -94,12 +94,12 @@ const CourseDescription = styled.p`
   margin: 5px 0;
 `;
 
-const JoinButton = styled.button`
+const JoinButton = styled(Link)`  /* Change from button to Link */
+  display: inline-block;
   padding: 10px 20px;
   background-color: #a436f0;
   color: white;
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
   border-radius: 4px;
 `;
 
@@ -152,7 +152,7 @@ function Home() {
             <CourseDetails>
               <CourseTitle>{course.name}</CourseTitle>
               <CourseDescription>{course.description}</CourseDescription>
-              <JoinButton>Join</JoinButton>
+              <JoinButton to={`/course/${course.id}`}>View Details</JoinButton> {/* Link to Course Description */}
             </CourseDetails>
           </CourseCard>
         ))}
